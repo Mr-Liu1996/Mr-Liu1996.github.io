@@ -1,204 +1,95 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="/css/main.css">
+<!-- Title -->
+<title>区块链挖矿 - 冷门-Hexo</title>
 
+<!-- Icon -->
+<link rel="icon" href="https://pic.baixiongz.com/uploads/2021/06/13/28f974989a220.png">
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"haipi.ml","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="GPU挖矿： lolMiner：  支持的平台：Windows、Android、MacOs、Linux  Download Url：lolMiner  命令：lolMiner.exe --algo ETHASH --pool 矿池地址:端口号 --user DOGE:YourAddress.YourWorkerName --ethstratum ETHPROXY    t-rex (nvidia">
-<meta property="og:type" content="article">
-<meta property="og:title" content="区块链挖矿">
-<meta property="og:url" content="https://haipi.ml/2021/06/14/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8C%96%E7%9F%BF/index.html">
-<meta property="og:site_name" content="冷门-Hexo">
-<meta property="og:description" content="GPU挖矿： lolMiner：  支持的平台：Windows、Android、MacOs、Linux  Download Url：lolMiner  命令：lolMiner.exe --algo ETHASH --pool 矿池地址:端口号 --user DOGE:YourAddress.YourWorkerName --ethstratum ETHPROXY    t-rex (nvidia">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://p.pstatp.com/origin/pgc-image/64d0c221ed1149a1a6be0a65557875c6">
-<meta property="og:image" content="https://p.pstatp.com/origin/pgc-image/b63ce3cc1e3e47b792e1419d24b6b075">
-<meta property="og:image" content="https://p.pstatp.com/origin/pgc-image/11bbf84f75a94053a55c39a8c23000ee">
-<meta property="og:image" content="https://p.pstatp.com/origin/pgc-image/bd336fc9f6824c499370206b5957baf2">
-<meta property="og:image" content="https://1.bp.blogspot.com/-f0iWmGfhNec/YIIkRvhenbI/AAAAAAAAB8g/qLNfXtGINrsgZ7LuzBsbtK5ndy0NuSRwwCLcBGAsYHQ/s16000/%25E6%2580%258E%25E4%25B9%2588%25E5%259C%25A8%25E6%2589%258B%25E6%259C%25BA%25E4%25B8%258A%25E6%258C%2596%25E7%259F%25BF_%25E5%2585%258D%25E8%25B4%25B9%25E6%258C%2596Dogecoin%25E6%2596%25B9%25E6%25B3%2595%2528%25E5%25AE%2589%25E5%258D%2593android%2529.jpg">
-<meta property="og:image" content="https://1.bp.blogspot.com/-Ii-jxy41K1A/YIE_y7ZnzPI/AAAAAAAAB7w/lyljhllbFMcm5J3od8pVTPYbQ7fRYazwgCLcBGAsYHQ/s16000/%25E6%2580%258E%25E4%25B9%2588%25E5%259C%25A8%25E6%2589%258B%25E6%259C%25BA%25E4%25B8%258A%25E6%258C%2596%25E7%259F%25BF%257C%25E5%2585%258D%25E8%25B4%25B9%25E6%258C%2596Dogecoin%25E6%2596%25B9%25E6%25B3%2595%2528%25E5%25AE%2589%25E5%258D%2593android%2529%257C%25E7%25BD%2591%25E7%25BB%259C%25E8%25B5%259A%25E9%2592%25B12021%25E5%258A%25A0%25E5%25AF%2586%25E8%25B4%25A7%25E5%25B8%2581%257Chow%2Bto%2Bmine%2Bon%2Byour%2Bandroid%2Bphone%2Buse%2Btermux%2Bxmrig%2Bunmineable.jpg">
-<meta property="og:image" content="https://1.bp.blogspot.com/-pJTKs4f0IVA/YIF3yTL5yCI/AAAAAAAAB8Q/Pn2rU95-OTI7MFaFdKzPEUCd4iiopGVCgCLcBGAsYHQ/s16000/20210422211747.jpg">
-<meta property="og:image" content="https://1.bp.blogspot.com/-2xuXkhMt6bU/YIF3ycKx6LI/AAAAAAAAB8U/4bqwPWiV7l8DANogYFDx1ryztwp9gV8SgCLcBGAsYHQ/s16000/20210422211438.jpg">
-<meta property="article:published_time" content="2021-06-14T09:11:08.000Z">
-<meta property="article:modified_time" content="2021-06-14T12:53:11.836Z">
-<meta property="article:author" content="MrLiu">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://p.pstatp.com/origin/pgc-image/64d0c221ed1149a1a6be0a65557875c6">
-
-<link rel="canonical" href="https://haipi.ml/2021/06/14/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8C%96%E7%9F%BF/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>区块链挖矿 | 冷门-Hexo</title>
-  
+<!-- Fonts -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null, this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"></noscript>
 
 
 
+<!-- Style -->
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-pure@1.0.1/dist/main.css"> -->
 
 
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body>
+        <div class="main gt-bg-theme-color-first">
+            <div class="main-content">
+                <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="https://pic.baixiongz.com/uploads/2021/06/13/28f974989a220.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            
+        </div>
     </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">冷门-Hexo</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">什么都写</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <button aria-label="Navbar Toggler" class="navbar-toggler" type="button" id="changeNavbar">
+        <i class="gt-c-content-color-first" style="font-size: 18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18px" fill="currentColor">
+                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+            </svg>
+        </i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center; ">
+            
+                <div class="nav-item">
+                    <a href="/" class="menu gt-a-link" target="_self">首页</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/archives/" class="menu gt-a-link" target="_self">归档</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/tags/" class="menu gt-a-link" target="_self">标签</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/friends/" class="menu gt-a-link" target="_self">友链</a>
+                </div>
+            
+        </div>
     </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
 </nav>
 
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://haipi.ml/2021/06/14/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8C%96%E7%9F%BF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="MrLiu">
-      <meta itemprop="description" content="没有">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="冷门-Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          区块链挖矿
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-06-14 17:11:08 / 修改时间：20:53:11" itemprop="dateCreated datePublished" datetime="2021-06-14T17:11:08+08:00">2021-06-14</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <p><img src="https://p.pstatp.com/origin/pgc-image/64d0c221ed1149a1a6be0a65557875c6"></p>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = function() {
+        let element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else { 
+            element.style.display = 'none';
+        }
+    }
+</script>
+                <div class="post-container">
+    <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
+        <article class="gt-post-content">
+            <h1 class="post-title">区块链挖矿</h1>
+            <div class="post-info">
+                <time class="post-time gt-c-content-color-first">
+                    · 2021-06-14 ·</time>
+                
+                    
+                
+            </div>
+            <hr>
+            <div class="post-content gt-c-content-color-first">
+                <p><img src="https://p.pstatp.com/origin/pgc-image/64d0c221ed1149a1a6be0a65557875c6"></p>
 <h2 id="GPU挖矿："><a href="#GPU挖矿：" class="headerlink" title="GPU挖矿："></a>GPU挖矿：</h2><ol>
 <li><p>lolMiner：</p>
 <ul>
@@ -322,183 +213,38 @@
 <h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="1-unmineable后台没有显示在线矿工"><a href="#1-unmineable后台没有显示在线矿工" class="headerlink" title="1. unmineable后台没有显示在线矿工"></a>1. unmineable后台没有显示在线矿工</h3><p>如果在后台没有显示矿工列表，需要将3333端口替换成13333端口，重试几次即可。</p>
 <p><a target="_blank" rel="noopener" href="https://1.bp.blogspot.com/-pJTKs4f0IVA/YIF3yTL5yCI/AAAAAAAAB8Q/Pn2rU95-OTI7MFaFdKzPEUCd4iiopGVCgCLcBGAsYHQ/s799/20210422211747.jpg"><img src="https://1.bp.blogspot.com/-pJTKs4f0IVA/YIF3yTL5yCI/AAAAAAAAB8Q/Pn2rU95-OTI7MFaFdKzPEUCd4iiopGVCgCLcBGAsYHQ/s16000/20210422211747.jpg" alt="怎么在手机上挖矿|免费挖Dogecoin方法(安卓android)"></a><br><a target="_blank" rel="noopener" href="https://1.bp.blogspot.com/-2xuXkhMt6bU/YIF3ycKx6LI/AAAAAAAAB8U/4bqwPWiV7l8DANogYFDx1ryztwp9gV8SgCLcBGAsYHQ/s800/20210422211438.jpg"><img src="https://1.bp.blogspot.com/-2xuXkhMt6bU/YIF3ycKx6LI/AAAAAAAAB8U/4bqwPWiV7l8DANogYFDx1ryztwp9gV8SgCLcBGAsYHQ/s16000/20210422211438.jpg" alt="怎么在手机上挖矿|免费挖Dogecoin方法(安卓android)"></a></p>
 
+            </div>
+        </article>
     </div>
-
+    <br>
     
-    
-    
-
-      <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2021/06/11/Git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/" rel="prev" title="Git设置代理">
-      <i class="fa fa-chevron-left"></i> Git设置代理
-    </a></div>
-      <div class="post-nav-item"></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
+        <div class="next-prev-post">
+            
+            
+                <div class="next-post">
+                    <div class="next gt-c-content-color-first">
+                        下一篇：<a href="/2021/06/11/Git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/" 
+                            class="post-title gt-a-link">Git设置代理</a>
+                    </div>
+                </div>
+            
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GPU%E6%8C%96%E7%9F%BF%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">GPU挖矿：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU%E6%8C%96%E7%9F%BF"><span class="nav-number">2.</span> <span class="nav-text">CPU挖矿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%BF%E6%B1%A0%E5%9C%B0%E5%9D%80%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">矿池地址：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E6%8C%96%E7%9F%BF-%E5%85%8D%E8%B4%B9%E6%8C%96Dogecoin%E6%96%B9%E6%B3%95-%E5%AE%89%E5%8D%93android"><span class="nav-number"></span> <span class="nav-text">怎么在手机上挖矿|免费挖Dogecoin方法(安卓android)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%9Dtermux%E6%89%8B%E6%A9%9F%E7%AB%AFapp"><span class="nav-number">1.</span> <span class="nav-text">1. 安裝termux手機端app</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%9Dubuntu"><span class="nav-number">2.</span> <span class="nav-text">2. 安裝ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%AE%89%E8%A3%9Dxmrig"><span class="nav-number">3.</span> <span class="nav-text">3. 安裝xmrig</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E8%BF%90%E8%A1%8C%E6%8C%96%E7%9F%BF"><span class="nav-number">4.</span> <span class="nav-text">4. 运行挖矿</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%91%BD%E4%BB%A4%E8%8C%83%E4%BE%8B-%E6%B3%A8%E6%84%8F%E6%9B%BF%E6%8D%A2%E4%B8%BA%E4%BD%A0%E7%9A%84%E9%92%B1%E5%8C%85%E5%9C%B0%E5%9D%80"><span class="nav-number">4.1.</span> <span class="nav-text">启动命令范例(注意替换为你的钱包地址)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%AD%A3%E7%A1%AE%E9%80%80%E5%87%BA%E7%A8%8B%E5%BA%8F"><span class="nav-number">5.</span> <span class="nav-text">5. 正确退出程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E9%87%8D%E6%96%B0%E5%90%AF%E5%8A%A8%E6%8C%96%E7%9F%BF%E7%A8%8B%E5%BA%8F"><span class="nav-number">6.</span> <span class="nav-text">6. 重新启动挖矿程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E6%8C%96%E7%9F%BF%E8%BF%9B%E7%A8%8B%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C"><span class="nav-number">7.</span> <span class="nav-text">7. 挖矿进程正常运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">8.</span> <span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-unmineable%E5%90%8E%E5%8F%B0%E6%B2%A1%E6%9C%89%E6%98%BE%E7%A4%BA%E5%9C%A8%E7%BA%BF%E7%9F%BF%E5%B7%A5"><span class="nav-number">8.1.</span> <span class="nav-text">1. unmineable后台没有显示在线矿工</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">MrLiu</p>
-  <div class="site-description" itemprop="description">没有</div>
+    
+    
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
+                <div class="site-footer gt-c-content-color-first">
+    <div class="footer-main">
+        <!-- 建议保留版权信息或者添加主题信息到友链，感谢您的理解 -->
+        <!-- 文件位置：layout/_includes/footer.ejs -->
+        <span style="text-align: right; float: right;">Theme <a 
+            href="https://github.com/renbaoshuo/hexo-theme-pure" target="_blank">Pure</a> | Powered by <a 
+            href="https://hexo.io" target="_blank">Hexo</a></span>
+        <span style="text-align: left;">Footer HTML
+</span>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">MrLiu</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
-  </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
+            </div>
+        </div>
+    </body>
 </html>
